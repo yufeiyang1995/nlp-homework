@@ -1,0 +1,46 @@
+package dictionary;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class ReadFile {
+	private Map<String,String> wordList= new HashMap<String,String>();
+	
+	public void readFile(String fileName) {
+		try {
+            // read file content from file
+            StringBuffer sb= new StringBuffer("");
+           
+            FileReader reader = new FileReader(fileName);
+            BufferedReader br = new BufferedReader(reader);
+           
+            String str = null;
+           
+            while((str = br.readLine()) != null) {
+            	sb.append(str+"/n");
+                
+                System.out.println(str);
+                
+                String[] context = str.split('?');
+                for(String item : context) {
+                	System.out.println(item);
+                }
+            }
+           
+            br.close();
+            reader.close();
+           
+      }
+      catch(FileNotFoundException e) {
+                  e.printStackTrace();
+            }
+            catch(IOException e) {
+                  e.printStackTrace();
+            }
+      }
+}
