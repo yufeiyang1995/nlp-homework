@@ -1,2 +1,0 @@
-INDEX VERSION 1.129+F:\课程\研一\自然语言处理\nlp-homework\.metadata\.plugins\org.eclipse.jdt.core
-565899265.index
